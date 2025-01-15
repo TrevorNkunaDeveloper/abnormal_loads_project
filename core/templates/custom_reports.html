@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Custom Reports{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-primary font-weight-bold mb-4">Custom Reports</h2>
+    <p class="text-muted">View and manage detailed custom reports</p>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Permit No</th>
+                        <th>Amend No</th>
+                        <th>Issue Date</th>
+                        <th>Status</th>
+                        <th>Escort Cost</th>
+                        <th>Admin/Eng Fee</th>
+                        <th>Permit Fee</th>
+                        <th>Amend Fee</th>
+                        <th>Invoice No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example row (replace with dynamic rows using Django template tags) -->
+                    <tr>
+                        <td>A305-001</td>
+                        <td>0</td>
+                        <td>2023-12-01</td>
+                        <td><span class="badge badge-success">Approved</span></td>
+                        <td>$150</td>
+                        <td>$200</td>
+                        <td>$1000</td>
+                        <td>$50</td>
+                        <td>INV-023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="mt-4 d-flex justify-content-end">
+        <button class="btn btn-outline-primary mr-2"><i class="fas fa-print"></i> Print</button>
+        <button class="btn btn-primary"><i class="fas fa-file-pdf"></i> Save as PDF</button>
+    </div>
+</div>
+{% endblock %}

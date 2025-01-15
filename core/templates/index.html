@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary font-weight-bold">Dashboard</h2>
+        <p class="text-muted">Welcome to the Abnormal Vehicle Permit System Dashboard</p>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-left-primary">
+                <div class="card-body">
+                    <h5 class="text-primary">Permits</h5>
+                    <p class="mb-0">Permit No: <strong>RA10003510</strong></p>
+                    <p>Status: <span class="badge badge-success">Approved</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-left-warning">
+                <div class="card-body">
+                    <h5 class="text-warning">Recent Activities</h5>
+                    <p class="mb-0">Submitted Permit: <strong>RA10003520</strong></p>
+                    <p class="text-muted">1 hr ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-left-info">
+                <div class="card-body">
+                    <h5 class="text-info">Quick Actions</h5>
+                    <button class="btn btn-primary btn-sm">Create New Permit</button>
+                    <button class="btn btn-outline-primary btn-sm">View Permits</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="row">
+        <!-- Pie Chart -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="text-primary">Permit Status Overview</h5>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Line Chart -->
+        <!-- Line Chart Section -->
+<div class="col-md-6 mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5 class="text-primary">Activity Timeline</h5>
+            <!-- Set a fixed height for the canvas container -->
+            <div style="height: 300px;">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Pie Chart Data
+    var ctxPie = document.getElementById('pieChart').getContext('2d');
+    var pieChart = new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+            labels: ['Approved', 'Pending', 'Rejected'],
+            datasets: [{
+                data: [40, 30, 10],
+                backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+            }]
+        }
+    });
+
+    // Line Chart Data
+var ctxLine = document.getElementById('lineChart').getContext('2d');
+var lineChart = new Chart(ctxLine, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            label: 'Permit Activity',
+            data: [10, 20, 15, 25, 30, 20, 40],
+            borderColor: '#007bff',
+            fill: false
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true, // Ensures chart maintains aspect ratio
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+</script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{# amend_permit.html - Permit Management: Edit/Amend Permit #}
+{% block title %}Edit/Amend Permit{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Edit/Amend Permit</h2>
+    <p class="text-muted text-center">Make changes to existing permits.</p>
+    <form method="POST" action="">
+        <div class="form-group">
+            <label for="permitNo">Permit Number</label>
+            <input type="text" id="permitNo" name="permit_no" class="form-control" placeholder="Enter Permit Number">
+        </div>
+        <div class="form-group">
+            <label for="status">Permit Status</label>
+            <select id="status" name="status" class="form-control">
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Changes</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block title %}Create New Permit{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">Create New Permit</h1>
+    <p class="text-gray-600">Fill in the required information to create a new permit.</p>
+    <div class="card shadow-sm p-4 mt-4">
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs" id="permitTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="owner-tab" data-bs-toggle="tab" data-bs-target="#owner" type="button" role="tab" aria-controls="owner" aria-selected="true">Owner/Acc Details</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="vehicle-tab" data-bs-toggle="tab" data-bs-target="#vehicle" type="button" role="tab" aria-controls="vehicle" aria-selected="false">Vehicle/Ld Details</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="permit-tab" data-bs-toggle="tab" data-bs-target="#permit" type="button" role="tab" aria-controls="permit" aria-selected="false">Permit Details</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="issue-tab" data-bs-toggle="tab" data-bs-target="#issue" type="button" role="tab" aria-controls="issue" aria-selected="false">Issue</button>
+            </li>
+        </ul>
+        
+        <!-- Tabs Content -->
+        <div class="tab-content mt-3" id="permitTabsContent">
+            <!-- Owner/Account Details Tab -->
+            <div class="tab-pane fade show active" id="owner" role="tabpanel" aria-labelledby="owner-tab">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Account Type</label>
+                        <input type="text" class="form-control" placeholder="Account Type">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Account Code</label>
+                        <input type="text" class="form-control" placeholder="Account Code">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Balance</label>
+                        <input type="text" class="form-control" placeholder="Balance">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Account Name</label>
+                        <input type="text" class="form-control" placeholder="Account Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Owner Code</label>
+                        <input type="text" class="form-control" placeholder="Owner Code">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Name of Carrier</label>
+                        <input type="text" class="form-control" placeholder="Name of Carrier">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Business Address</label>
+                        <textarea class="form-control" placeholder="Business Address"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Tel. Code</label>
+                        <input type="text" class="form-control" placeholder="Tel. Code">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Tel. No.</label>
+                        <input type="text" class="form-control" placeholder="Tel. No.">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Cel. No.</label>
+                        <input type="text" class="form-control" placeholder="Cel. No.">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle/Load Details Tab -->
+            <div class="tab-pane fade" id="vehicle" role="tabpanel" aria-labelledby="vehicle-tab">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Load Length</label>
+                        <input type="text" class="form-control" placeholder="Load Length">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Load Width</label>
+                        <input type="text" class="form-control" placeholder="Load Width">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Load Height</label>
+                        <input type="text" class="form-control" placeholder="Load Height">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Mass</label>
+                        <input type="text" class="form-control" placeholder="Mass">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Total Length</label>
+                        <input type="text" class="form-control" placeholder="Total Length">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Total Width</label>
+                        <input type="text" class="form-control" placeholder="Total Width">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Total Height</label>
+                        <input type="text" class="form-control" placeholder="Total Height">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Wheelbase</label>
+                        <input type="text" class="form-control" placeholder="Wheelbase">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Overhang (Front)</label>
+                        <input type="text" class="form-control" placeholder="Overhang Front">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Overhang (Rear)</label>
+                        <input type="text" class="form-control" placeholder="Overhang Rear">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Permit Details Tab -->
+            <div class="tab-pane fade" id="permit" role="tabpanel" aria-labelledby="permit-tab">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Type of Permit</label>
+                        <select class="form-control">
+                            <option>Empty Only</option>
+                            <option>Trip</option>
+                            <option>Route-period</option>
+                            <option>Area-period</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Route Code</label>
+                        <input type="text" class="form-control" placeholder="Route Code">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Start Destination</label>
+                        <input type="text" class="form-control" placeholder="Start Destination">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">End Destination</label>
+                        <input type="text" class="form-control" placeholder="End Destination">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Validity Period</label>
+                        <select class="form-control">
+                            <option>1 month</option>
+                            <option>2 months</option>
+                            <option>4 months</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Operational Area</label>
+                        <input type="text" class="form-control" placeholder="Operational Area">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Issue Tab -->
+            <div class="tab-pane fade" id="issue" role="tabpanel" aria-labelledby="issue-tab">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Weighbridge Station</label>
+                        <input type="text" class="form-control" placeholder="Weighbridge Station">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">RTI Station (TOE's)</label>
+                        <input type="text" class="form-control" placeholder="RTI Station">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Standard Permit Conditions</label>
+                        <input type="text" class="form-control" placeholder="Standard Permit Conditions">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Speeds - Rural</label>
+                        <input type="text" class="form-control" placeholder="Rural Speed">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Speeds - Urban</label>
+                        <input type="text" class="form-control" placeholder="Urban Speed">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Speeds - Bridges</label>
+                        <input type="text" class="form-control" placeholder="Bridges Speed">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

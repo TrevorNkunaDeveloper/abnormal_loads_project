@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{# print_permit.html - Permit Management: Print/Export Permit #}
+{% block title %}Print/Export Permit{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Print/Export Permit</h2>
+    <p class="text-muted text-center">Export permit details or print them.</p>
+    <form method="POST" action="">
+        <div class="form-group">
+            <label for="permitNo">Permit Number</label>
+            <input type="text" id="permitNo" name="permit_no" class="form-control" placeholder="Enter Permit Number">
+        </div>
+        <button type="submit" class="btn btn-success">Export as PDF</button>
+        <button type="button" class="btn btn-secondary" onclick="window.print()">Print Permit</button>
+    </form>
+</div>
+{% endblock %}

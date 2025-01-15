@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{# cancel_permit.html - Permit Management: Cancel Permit #}
+{% block title %}Cancel Permit{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Cancel Permit</h2>
+    <p class="text-muted text-center">Cancel an existing permit.</p>
+    <form method="POST" action="">
+        <div class="form-group">
+            <label for="permitNo">Permit Number</label>
+            <input type="text" id="permitNo" name="permit_no" class="form-control" placeholder="Enter Permit Number">
+        </div>
+        <button type="submit" class="btn btn-danger">Cancel Permit</button>
+    </form>
+</div>
+{% endblock %}

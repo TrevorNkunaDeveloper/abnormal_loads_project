@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Payment Successful{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-success text-center" role="alert">
+        <h4 class="alert-heading">Payment Successful</h4>
+        <p>Your payment was processed successfully!</p>
+        <p>Payment of R<span id="displayAmount"></span> using <span id="displayMethod"></span> was successful.</p>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'payment' %}" class="btn btn-primary">Make Another Payment</a>
+        <a href="{% url 'view_statement' %}" class="btn btn-outline-secondary">View Statement</a>
+    </div>
+</div>
+
+<script>
+    // Extract amount and method from the URL
+    const params = new URLSearchParams(window.location.search);
+    const amount = params.get('amount');
+    const method = params.get('method');
+
+    // Display amount and method on the page
+    document.getElementById('displayAmount').textContent = amount ? amount : '0';
+    document.getElementById('displayMethod').textContent = method ? method : 'Unknown';
+</script>
+{% endblock %}

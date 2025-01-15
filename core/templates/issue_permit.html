@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{# issue_permit.html - Permit Management: Issue Permit #}
+{% block title %}Issue Permit{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Issue Permit</h2>
+    <p class="text-muted text-center">Issue a new permit for a vehicle.</p>
+    <form method="POST" action="">
+        <div class="form-group">
+            <label for="vehicle">Vehicle Registration</label>
+            <input type="text" id="vehicle" name="vehicle_reg" class="form-control" placeholder="Enter Vehicle Registration">
+        </div>
+        <div class="form-group">
+            <label for="permitType">Permit Type</label>
+            <select id="permitType" name="permit_type" class="form-control">
+                <option value="Empty Only">Empty Only</option>
+                <option value="Trip">Trip</option>
+                <option value="Route-period">Route-period</option>
+                <option value="Area-period">Area-period</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Issue Permit</button>
+    </form>
+</div>
+{% endblock %}
