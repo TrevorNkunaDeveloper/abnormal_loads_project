@@ -38,53 +38,53 @@ The **Abnormal Vehicle Permit System (AVP)** is a web-based application designed
 ## Screenshots
 
 ### Dashboard
-![Dashboard](core/screenshots/dashboard.png)
+![Dashboard](core/static/screenshots/dashboard.png)
 
 ### Help & Support
-![Help & Support](core/screenshots/help_support.png)
+![Help & Support](core/static/screenshots/help_support.png)
 
 ### Payment Methods
-![Payment Methods](core/screenshots/payment_methods.png)
+![Payment Methods](core/static/screenshots/payment_methods.png)
 
 ### Payment Success
-![Payment Success](core/screenshots/payment_success.png)
+![Payment Success](core/static/screenshots/payment_success.png)
 
 ### Settings
-![Settings](core/screenshots/settings.png)
+![Settings](core/static/screenshots/settings.png)
 
 ### Data Management
-![Data Management](core/screenshots/data_management.png)
+![Data Management](core/static/screenshots/data_management.png)
 
 ### User Management
-![User Management](core/screenshots/user_management.png)
+![User Management](core/static/screenshots/user_management.png)
 
 #### Add User
-![Add User](core/screenshots/add_user.png)
+![Add User](core/static/screenshots/add_user.png)
 
 #### Delete User
-![Delete User](core/screenshots/delete_user.png)
+![Delete User](core/static/screenshots/delete_user.png)
 
 ### Reports
 
 #### Ad Hoc Reports
-![Ad Hoc Reports](core/screenshots/ad_hoc_reports.png)
+![Ad Hoc Reports](core/static/screenshots/ad_hoc_reports.png)
 
 #### Monthly Reports
-![Monthly Reports](core/screenshots/monthly_reports.png)
+![Monthly Reports](core/static/screenshots/monthly_reports.png)
 
 ### Permit Management
 
 #### Create New Permit - Owner/Account Details
-![Create Permit - Owner Details](core/screenshots/create_permit_owner.png)
+![Create Permit - Owner Details](core/static/screenshots/create_permit_owner.png)
 
 #### Create New Permit - Vehicle/Load Details
-![Create Permit - Vehicle Details](core/screenshots/create_permit_vehicle.png)
+![Create Permit - Vehicle Details](core/static/screenshots/create_permit_vehicle.png)
 
 #### Create New Permit - Permit Details
-![Create Permit - Permit Details](core/screenshots/create_permit_details.png)
+![Create Permit - Permit Details](core/static/screenshots/create_permit_details.png)
 
 #### Edit/Amend Permit
-![Edit/Amend Permit](core/screenshots/edit_amend_permit.png)
+![Edit/Amend Permit](core/static/screenshots/edit_amend_permit.png)
 
 ---
 
