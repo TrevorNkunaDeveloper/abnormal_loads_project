@@ -87,3 +87,13 @@ jobs:
           docker stop my_project || true
           docker rm my_project || true
           docker run -d --name my_project -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/my_project:latest
+
+#(Notes) Secrets Required in GitHub
+#-DOCKER_USERNAME: Your Docker Hub username.
+#-DOCKER_PASSWORD: Your Docker Hub password.
+#-PRODUCTION_SERVER_IP: The IP address of your production server.
+#-PRODUCTION_SERVER_USER: The SSH username for the server.
+#-PRODUCTION_SERVER_PASSWORD: The SSH password for the server.
+#-PRODUCTION_SERVER_PORT: The SSH port (default is 22).
+
+          
