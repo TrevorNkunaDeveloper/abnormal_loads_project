@@ -298,28 +298,26 @@ class Transaction(models.Model):
     def __str__(self):
         return f"Transaction {self.dbPermitNo} - {self.dbReferenceNo}"
 
- # Transaction Amended Model(Inherits from transaction)   
+# Transaction Amended Model(Inherits from transaction)
 class TransactionsAmended(Transaction):
     class Meta:
         verbose_name = "Amended Transaction"
         verbose_name_plural = "Amended Transactions"
         db_table = "transactions_amended"
 
- # Transaction Cancelled Model(Inherits from transaction)   
+# Transaction Cancelled Model(Inherits from transaction)
 class TransactionsCancelled(Transaction):
     class Meta:
         verbose_name = "Cancelled Transaction"
         verbose_name_plural = "Cancelled Transactions"
         db_table = "transactions_cancelled"
 
- # Transaction Corrected Model(Inherits from transaction)   
+# Transaction Corrected Model(Inherits from transaction)
 class TransactionsCorrected(Transaction):
     class Meta:
         verbose_name = "Corrected Transaction"
         verbose_name_plural = "Corrected Transactions"
         db_table = "transactions_corrected"
-
-
 
 # User models
 class User(models.Model):
@@ -337,4 +335,3 @@ class User(models.Model):
 
     def __str__(self):
         return self.full_name
-
